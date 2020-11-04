@@ -1,21 +1,22 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class Player here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Player extends Actor
-{
+    import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+    
+    /**
+    * Write a description of class Player here.
+    * 
+    * @author (your name) 
+    * @version (a version number or a date)
+    */
+    public class Player extends Actor
+    {
     private GreenfootImage imageLeft;
     private GreenfootImage imageRight;
     
     public Player()
     {
         imageLeft = new GreenfootImage("playerLeft.png");
-        imageRight = new GreenfootImage("playerRight.png");        
+        imageRight = new GreenfootImage("playerRight.png");   
     }
+    
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -23,40 +24,39 @@ public class Player extends Actor
     public void act() 
     {
         movingAndTurning();
+        collectingNuggets();
     }    
     
     protected void movingAndTurning() {
+        int speed = 6;
+        
         if(Greenfoot.isKeyDown("right")) {
-            setRotation(0);
             if(getImage() != imageRight) {
                 setImage(imageRight);
             }
-            setRotation(0);
-            move(5);
+            this.setLocation(getX() + speed, getY());
         }
         
         if(Greenfoot.isKeyDown("left")) {
             if(getImage() != imageLeft) {
                 setImage(imageLeft);
             }
-            setRotation(0);
-            move(-5);
+            this.setLocation(getX() - speed, getY());
         }
         
         if(Greenfoot.isKeyDown("up")) {
-            if(getImage() != imageRight) {
-                setImage(imageRight);
-            }
-            setRotation(-90);
-            move(5);
+            this.setLocation(getX(), getY() - speed);
         }
         
         if(Greenfoot.isKeyDown("down")) {
-            if(getImage() != imageRight) {
-                setImage(imageRight);
-            }
-            setRotation(90);
-            move(5);
+            this.setLocation(getX(), getY() + speed);
+        }
+    }
+    protected void collectingNuggets() {
+        Actor nugget;
+        nugget = getOneObjectAtOffset(0, 0, Nugget.class);
+        if(this.isTouching(Nugget.class)) {
+            getWorld().removeObject(nugget);
         }
     }
 }

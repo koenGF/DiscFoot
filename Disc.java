@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+
 /**
  * Write a description of class Disc here.
  * 
@@ -7,13 +8,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class Disc extends Actor
-{
+{    
     /**
      * Act - do whatever the Disc wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
+        setRotation();
+        foundPlayer();
+    }
+        
+    protected void setRotation() {
         int speed = 10;
         move(speed);
         int x, y, i, wx, wy;
@@ -43,5 +49,14 @@ public class Disc extends Actor
             move(-speed);
             setRotation(getRotation() + 90);
         }
-    }    
+    }
+    
+    protected void foundPlayer() {
+        Actor player;
+        player = getOneObjectAtOffset(0, 0, Player.class);
+        if(player != null) {
+            getWorld().removeObject(player);
+            Greenfoot.stop();
+        }
+    }
 }
