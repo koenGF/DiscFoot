@@ -9,7 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Player extends Actor
 {
     int speed = 6;
-
     private GreenfootImage imageLeft;
     private GreenfootImage imageRight;
 
