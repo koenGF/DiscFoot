@@ -20,7 +20,7 @@ public class Nugget extends Actor
     private void nuggetSpawn() {
         int worldNuggets = getWorld().getObjects(Nugget.class).size();
         if(worldNuggets < 10) {
-            getWorld().addObject(new Nugget(), Greenfoot.getRandomNumber(getWorld().getWidth() - 30) + 15, Greenfoot.getRandomNumber(getWorld().getHeight() - 30));
+            getWorld().addObject(new Nugget(), Greenfoot.getRandomNumber(getWorld().getWidth() - 20) + 10, Greenfoot.getRandomNumber(getWorld().getHeight() - 20) + 10);
         }
     }
 }

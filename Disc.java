@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Disc extends Actor
 {    
+    private GreenfootSound sound;
+
     /**
      * Act - do whatever the Disc wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -40,12 +42,12 @@ public class Disc extends Actor
             setRotation(getRotation() + 90);
         }
         
-        if(x <= 35) { 
+        if(x <= i) { 
             move(-speed);
             setRotation(getRotation() + 90);
         }
         
-        if(y <= 35) { 
+        if(y <= i) { 
             move(-speed);
             setRotation(getRotation() + 90);
         }
@@ -55,6 +57,7 @@ public class Disc extends Actor
         Actor player;
         player = getOneObjectAtOffset(0, 0, Player.class);
         if(player != null) {
+            Greenfoot.playSound("death.wav");
             getWorld().removeObject(player);
             Greenfoot.stop();
         }
