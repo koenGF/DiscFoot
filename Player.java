@@ -29,7 +29,7 @@ public class Player extends Actor
         foundWall();
     }    
 
-    protected void movingAndTurning() {
+    private void movingAndTurning() {
 
         if(Greenfoot.isKeyDown("right")) {
             if(getImage() != imageRight) {
@@ -54,7 +54,7 @@ public class Player extends Actor
         }
     }
 
-    protected void collectingNuggets() {
+    private void collectingNuggets() {
         Actor nugget;
         nugget = getOneObjectAtOffset(0, 0, Nugget.class);
         if(this.isTouching(Nugget.class)) {
@@ -62,7 +62,7 @@ public class Player extends Actor
         }
     }
 
-    protected void foundWall() {
+    private void foundWall() {
         int x, y, i, wx, wy;
 
         x = getX();

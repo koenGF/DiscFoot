@@ -8,8 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MiniDisc extends Enemy
 {
+    int random;
     public MiniDisc() {
-        setRotation(Greenfoot.getRandomNumber(360));
+        setRotation(Greenfoot.getRandomNumber(270) + 135);
     }
     
     /**
@@ -18,7 +19,8 @@ public class MiniDisc extends Enemy
      */
     public void act() 
     {
+        random = Greenfoot.getRandomNumber(180);
         foundPlayer();
-        setRotation();
+        bounce(7, random);
     }    
 }

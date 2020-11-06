@@ -14,7 +14,7 @@ public class Disc extends Enemy
      */
     public void act() 
     {
-        setRotation();
+        bounce(10, 90);
         foundPlayer();
     }    
 }

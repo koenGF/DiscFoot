@@ -17,9 +17,8 @@ public class Enemy extends Actor
         // Add your action code here.
     }
     
-    public void setRotation() {
-        int speed = 10;
-        move(speed);
+    protected void bounce(int speed, int degrees) {
+        move(speed);        
         int x, y, i, wx, wy;
 
         x = getX();
@@ -30,26 +29,26 @@ public class Enemy extends Actor
 
         if(x >= wx) { 
             move(-speed);
-            setRotation(getRotation() + 90);
+            setRotation(getRotation() + degrees);
         }
 
         if(y >= wy) { 
             move(-speed);
-            setRotation(getRotation() + 90);
+            setRotation(getRotation() + degrees);
         }
 
         if(x <= i) { 
             move(-speed);
-            setRotation(getRotation() + 90);
+            setRotation(getRotation() + degrees);
         }
 
         if(y <= i) { 
             move(-speed);
-            setRotation(getRotation() + 90);
+            setRotation(getRotation() + degrees);
         }
     }
 
-    public void foundPlayer() {
+    protected void foundPlayer() {
         GreenfootSound sound = new GreenfootSound("DR SFX DEATH GOREnew1.mp3");
         Actor player;
         player = getOneObjectAtOffset(0, 0, Player.class);
