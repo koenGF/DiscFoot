@@ -16,8 +16,8 @@ public class Enemy extends Actor
     {
         // Add your action code here.
     }
-    
-    protected void bounce(int speed, int degrees) {
+
+    public void bounce(int speed, int degrees) {
         move(speed);        
         int x, y, i, wx, wy;
 
@@ -54,6 +54,7 @@ public class Enemy extends Actor
         player = getOneObjectAtOffset(0, 0, Player.class);
         if(player != null) {
             sound.play();
+            getWorld().addObject(new Blood(), getX(), getY());
             getWorld().removeObject(player);
             Greenfoot.stop();
         }
