@@ -15,7 +15,7 @@ Greenfoot version: 3.6.1
 Java version: 11.0.2
 HOW TO START THIS PROJECT: open project.greenfoot with greenfoot
 CONTROLS: WASD or arrow keys
-AUTHOR(S): KoenGF 
+AUTHOR(S): koenGF 
 KNOWN BUGS:
 
 - timer starts when the game is reset, instead of when the game is started.
@@ -33,6 +33,8 @@ https://itch.io/jam/disc-room-game-jam (under resources)
 ==background music==
 319215rhs - audio_17ec9574c2
 https://pixabay.com/users/319215rhs-18643459/
+
+
 
 
 ==CHECK OUT DISC ROOM==
