@@ -11,13 +11,15 @@ ______ _           ______          _
 PROJECT TITLE: Disc Foot
 PURPOSE OF PROJECT: greenfoot practice
 VERSION or DATE: 13/11
+Greenfoot version: 3.6.1
+Java version: 11.0.2
 HOW TO START THIS PROJECT: open project.greenfoot with greenfoot
 CONTROLS: WASD or arrow keys
-AUTHORS: KoenGF 
+AUTHOR(S): KoenGF 
 KNOWN BUGS:
 
-timer starts when the game resets, not when the game is started.
-discs sometimes get stuck in the corners.
+- timer starts when the game is reset, instead of when the game is started.
+- discs sometimes get stuck in the corners.
 
 
 AUDIO:
@@ -30,8 +32,7 @@ https://itch.io/jam/disc-room-game-jam (under resources)
 
 ==background music==
 319215rhs - audio_17ec9574c2
-https://pixabay.com/users/319215rhs-18643459/?tab=audio&amp;utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=audio&amp;utm_content=1135%22%3E319215rhs
-
+https://pixabay.com/users/319215rhs-18643459/
 
 
 ==CHECK OUT DISC ROOM==
