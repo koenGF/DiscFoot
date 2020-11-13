@@ -11,8 +11,8 @@ ______ _           ______          _
 PROJECT TITLE: Disc Foot
 PURPOSE OF PROJECT: greenfoot practice
 VERSION or DATE: 13/11
-Greenfoot version: 3.6.1
-Java version: 11.0.2
+GREENFOOT VERSION: 3.6.1
+JAVA VERSION: 11.0.2
 HOW TO START THIS PROJECT: open project.greenfoot with greenfoot
 CONTROLS: WASD or arrow keys
 AUTHOR(S): koenGF 
