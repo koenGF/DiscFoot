@@ -31,25 +31,25 @@ public class Player extends Actor
 
     private void movingAndTurning() {
 
-        if(Greenfoot.isKeyDown("right")) {
+        if(Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d")) {
             if(getImage() != imageRight) {
                 setImage(imageRight);
             }
             this.setLocation(getX() + speed, getY());
         }
 
-        if(Greenfoot.isKeyDown("left")) {
+        if(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a")) {
             if(getImage() != imageLeft) {
                 setImage(imageLeft);
             }
             this.setLocation(getX() - speed, getY());
         }
 
-        if(Greenfoot.isKeyDown("up")) {
+        if(Greenfoot.isKeyDown("up") || Greenfoot.isKeyDown("w")) {
             this.setLocation(getX(), getY() - speed);
         }
 
-        if(Greenfoot.isKeyDown("down")) {
+        if(Greenfoot.isKeyDown("down") || Greenfoot.isKeyDown("s")) {
             this.setLocation(getX(), getY() + speed);
         }
     }

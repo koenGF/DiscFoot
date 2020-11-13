@@ -10,8 +10,9 @@ ______ _           ______          _
 
 PROJECT TITLE: Disc Foot
 PURPOSE OF PROJECT: greenfoot practice
-VERSION or DATE: pre-release
+VERSION or DATE: 13/11
 HOW TO START THIS PROJECT: open project.greenfoot with greenfoot
+CONTROLS: WASD or arrow keys
 AUTHORS: KoenGF 
 KNOWN BUGS:
 
